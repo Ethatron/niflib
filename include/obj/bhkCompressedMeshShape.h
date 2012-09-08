@@ -60,6 +60,29 @@ public:
 	NIFLIB_API virtual const Type & GetType() const;
 
 	//--BEGIN MISC CUSTOM CODE--//
+	/*!
+	 * Retrieve target
+	 * \return target
+     */
+	NIFLIB_API  NiAVObject* GetTarget() const;
+	
+	/*!
+	 * Set target 
+	 * \param[in] value target
+     */
+	NIFLIB_API void SetTarget(NiAVObject* value);
+
+	/*!
+	 * Retrieve data
+	 * \return data
+     */
+	NIFLIB_API  Ref<bhkCompressedMeshShapeData > GetData() const;
+
+	/*!
+	 * Set data
+	 * \param[in] value data
+     */
+	NIFLIB_API void SetData(Ref<bhkCompressedMeshShapeData > value);
 
 	//--END CUSTOM CODE--//
 protected:
@@ -70,9 +93,19 @@ protected:
 	/*! Unknown. */
 	float unknownFloat1;
 	/*! Unknown. */
-	array<8,byte > unknown8Bytes;
+	array<4,byte > unknown4Bytes;
 	/*! Unknown */
-	array<8,float > unknownFloats;
+	Vector4 unknownFloats1;
+	/*! A shell with that radius is added around the shape. */
+	float radius;
+	/*! Scale */
+	float scale;
+	/*! Unknown */
+	float unknownFloat3;
+	/*! Unknown */
+	float unknownFloat4;
+	/*! Unknown */
+	float unknownFloat5;
 	/*! The collision mesh data. */
 	Ref<bhkCompressedMeshShapeData > data;
 public:

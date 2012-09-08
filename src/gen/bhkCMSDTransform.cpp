@@ -5,26 +5,27 @@ All rights reserved.  Please see niflib.h for license. */
 
 //To change this file, alter the niftools/docsys/gen_niflib.py Python script.
 
-#include "../../include/gen/bhkCMSD_Something.h"
+#include "../../include/gen/bhkCMSDTransform.h"
+#include "../../include/gen/QuaternionXYZW.h"
 using namespace Niflib;
 
 //Constructor
-bhkCMSD_Something::bhkCMSD_Something() : largeInt((unsigned int)0), unknownInteger((unsigned int)0) {};
+bhkCMSDTransform::bhkCMSDTransform() {};
 
 //Copy Constructor
-bhkCMSD_Something::bhkCMSD_Something( const bhkCMSD_Something & src ) {
+bhkCMSDTransform::bhkCMSDTransform( const bhkCMSDTransform & src ) {
 	*this = src;
 };
 
 //Copy Operator
-bhkCMSD_Something & bhkCMSD_Something::operator=( const bhkCMSD_Something & src ) {
-	this->largeInt = src.largeInt;
-	this->unknownInteger = src.unknownInteger;
+bhkCMSDTransform & bhkCMSDTransform::operator=( const bhkCMSDTransform & src ) {
+	this->translation = src.translation;
+	this->rotation = src.rotation;
 	return *this;
 };
 
 //Destructor
-bhkCMSD_Something::~bhkCMSD_Something() {};
+bhkCMSDTransform::~bhkCMSDTransform() {};
 
 //--BEGIN MISC CUSTOM CODE--//
 
